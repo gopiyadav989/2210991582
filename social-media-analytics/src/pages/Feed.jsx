@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, Box, CircularProgress, Alert, Grid, Button } from '@mui/material';
+import { Container, Typography, Box, Alert, Grid, Button } from '@mui/material';
 import { Refresh as RefreshIcon } from '@mui/icons-material';
 import { getUsers, getUserPosts, getPostComments } from '../services/api';
 import { getFeedPosts } from '../utils/dataProcessing';
 import PostCard from '../components/PostCard';
+import LoadingState from '../components/LoadingState';
+import ErrorState from '../components/ErrorState';
 
 const Feed = () => {
   const [loading, setLoading] = useState(true);
@@ -16,6 +18,7 @@ const Feed = () => {
     try {
       if (isRefresh) {
         setRefreshing(true);
+        setError(null);
       } else {
         setLoading(true);
       }
@@ -113,11 +116,9 @@ const Feed = () => {
       </Box>
       
       {loading ? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
-          <CircularProgress />
-        </Box>
+        <LoadingState message="Loading feed..." />
       ) : error ? (
-        <Alert severity="error">{error}</Alert>
+        <ErrorState message={error} onRetry={() => fetchData()} />
       ) : feedPosts.length === 0 ? (
         <Alert severity="info">No posts found.</Alert>
       ) : (
