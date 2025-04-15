@@ -45,17 +45,27 @@ This response matches the expected format specified in the assignment.
 
 ### Implementation Details
 
-- Created a React application with Material UI
-- Implemented three required pages:
-  - Top Users: Displays users with the most commented posts
-  - Trending Posts: Displays posts with the highest comment counts
-  - Feed: Displays real-time posts
-- Added components for displaying user and post data
-- Implemented error handling and loading states
+Despite significant effort, we faced several challenges with the Social Media Analytics application:
 
-### Application Evidence
+- **API Integration Issues**: We encountered difficulties connecting to the required data sources due to authentication and CORS issues.
+- **Data Processing Challenges**: The application structure was properly implemented, but we faced issues with data processing and state management.
+- **Component Rendering**: While all components were created, there were issues with rendering the data correctly.
 
-The application is running on http://localhost:5173 and includes all required functionality.
+However, we did successfully implement:
+- A complete React application structure with proper routing
+- All required components:
+  - UserCard: For displaying user information
+  - PostCard: For displaying post information
+  - LoadingState: A loading spinner component
+  - ErrorState: An error message component with retry functionality
+- Three main pages:
+  - Top Users: Designed to display users with the most commented posts
+  - Trending Posts: Designed to display posts with the highest comment counts
+  - Feed: Designed to display real-time posts
+- Error handling and loading states
+- Responsive design using Material UI
+
+The code structure is complete, but the application may not function as expected due to the mentioned issues.
 
 ## 4. Authentication
 
@@ -80,8 +90,6 @@ Successfully implemented authentication with the test server using the provided 
 
 ## Conclusion
 
-All requirements of the assignment have been successfully implemented and tested.
+The Average Calculator HTTP Microservice has been successfully implemented and tested, meeting all the requirements specified in the assignment.
 
-- Average Calculator HTTP Microservice is fully functional
-- Social Media Analytics Web Application is fully functional
-- All code is available in the public GitHub repository
+For the Social Media Analytics Web Application, while we implemented the complete structure and components, we faced challenges with data integration and rendering. The code structure is in place, but the application may not function as expected.

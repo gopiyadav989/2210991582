@@ -22,6 +22,31 @@ This repository contains two projects:
 - Express
 - Axios for API requests
 
+## Implementation Status
+
+### Social Media Analytics Web Application
+Despite significant effort and implementation work, we encountered several challenges with the Social Media Analytics application:
+
+1. **API Integration Issues**: We faced difficulties connecting to the required data sources due to authentication and CORS issues.
+2. **Data Processing Challenges**: The application structure was properly implemented, but we encountered issues with data processing and state management.
+3. **Component Rendering**: While all components were created (UserCard, PostCard, LoadingState, ErrorState), there were issues with rendering the data correctly.
+
+Despite these challenges, we implemented:
+- A complete application structure with proper routing
+- All required components and pages
+- Error handling and loading states
+- Responsive design using Material UI
+
+The code structure is complete, but the application may not function as expected due to the mentioned issues.
+
+### Average Calculator HTTP Microservice
+The Average Calculator HTTP Microservice has been successfully implemented with all required functionality:
+
+- Accepts qualified number IDs ('p', 'f', 'e', 'r')
+- Fetches numbers from the third-party server
+- Calculates averages correctly
+- Responds with the required format
+
 ## How to Run
 
 ### Average Calculator HTTP Microservice
